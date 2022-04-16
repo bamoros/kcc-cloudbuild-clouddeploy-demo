@@ -1,0 +1,8 @@
+apiVersion: serviceusage.cnrm.cloud.google.com/v1beta1
+kind: Service
+metadata:
+  name: storage.googleapis.com
+  namespace: config-control
+spec:
+  projectRef:
+    external: projects/coherent-surf-334316
