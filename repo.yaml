@@ -21,7 +21,7 @@ metadata:
     label-one: "value-one"
   namespace: config-control
   # StorageBucket names must be globally unique. Replace ${PROJECT_ID?} with your project ID.
-  name: hola2-coherent-surf-334316-sample
+  name: hola3-amoros-sandbox-344216-sample
 spec:
   lifecycleRule:
     - action:
