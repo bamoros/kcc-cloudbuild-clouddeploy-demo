@@ -10,7 +10,7 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "create", "rel-hola1",
+      "deploy", "releases", "create", "rel-hola2",
       "--delivery-pipeline", "pop-stats-pipeline",
       "--region", "us-central1",
     ]
