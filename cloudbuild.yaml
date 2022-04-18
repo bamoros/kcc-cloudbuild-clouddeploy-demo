@@ -12,6 +12,7 @@ steps:
     [
       "deploy", "releases", "create", "rel-hola1",
       "--delivery-pipeline", "pop-stats-pipeline",
+      "--region", "us-central1",
     ]
 
 
