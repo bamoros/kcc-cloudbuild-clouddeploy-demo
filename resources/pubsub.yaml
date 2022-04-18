@@ -22,4 +22,4 @@ metadata:
       cnrm.cloud.google.com/project-id: amoros-sandbox-344216
   name: pubsubtopic-sample
 spec:
-  resourceID: pubsubtopic-sample
+  resourceID: pubsubtopic-sample-2
