@@ -10,11 +10,8 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "create", "rel-${SHORT_SHA}",
+      "deploy", "releases", "create", "rel-hola1",
       "--delivery-pipeline", "pop-stats-pipeline",
-      "--region", "us-central1",
-      "--annotations", "commitId=${REVISION_ID}",
-      "--images", "pop-stats=us-central1-docker.pkg.dev/$PROJECT_ID/pop-stats/pop-stats:${COMMIT_SHA}"
     ]
 
 
