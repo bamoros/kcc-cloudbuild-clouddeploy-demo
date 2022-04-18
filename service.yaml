@@ -5,4 +5,4 @@ metadata:
   namespace: config-control
 spec:
   projectRef:
-    external: projects/coherent-surf-334316
+    external: projects/amoros-sandbox-344216
