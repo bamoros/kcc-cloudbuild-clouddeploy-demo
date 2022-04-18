@@ -10,8 +10,8 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "create", "rel-hola2",
-      "--delivery-pipeline", "pop-stats-pipeline",
+      "deploy", "releases", "create", "test-release-001",
+      "--delivery-pipeline", "my-demo-app-1",
       "--region", "us-central1",
     ]
 
