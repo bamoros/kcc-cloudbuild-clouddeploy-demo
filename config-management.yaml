@@ -16,5 +16,5 @@ spec:
     secretType: gcpserviceaccount
     gcpServiceAccountEmail: config-sync-sa@amoros-sandbox-344216.iam.gserviceaccount.com
     syncBranch: main
-    syncRepo: https://source.developers.google.com/p/amoros-sandbox-344216/r/source-repo-demo
+    syncRepo: https://github.com/bamoros/sabado-repo
   sourceFormat: unstructured
