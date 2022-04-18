@@ -18,6 +18,7 @@ metadata:
   annotations:
     cnrm.cloud.google.com/delete-contents-on-destroy: "false"
   name: bigquerydatasetsample
+  namespace: config-control
 spec:
   defaultTableExpirationMs: 3600000
   description: "BigQuery Dataset Sample"
