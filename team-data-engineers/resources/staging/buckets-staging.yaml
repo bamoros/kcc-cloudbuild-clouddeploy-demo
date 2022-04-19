@@ -29,7 +29,7 @@ spec:
       condition:
         age: 7
   versioning:
-    enabled: false
+    enabled: true
   cors:
     - origin: ["http://example.appspot.com"]
       responseHeader: ["Content-Type"]
