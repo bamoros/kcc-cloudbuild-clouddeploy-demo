@@ -1,11 +1,15 @@
 steps:
 - name: 'gcr.io/cloud-builders/kubectl'
+  id: step1
   args: ['apply', '-f', 'resources/'  ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
   - 'CLOUDSDK_CONTAINER_CLUSTER=krmapihost-config-controller-bc'
 
 - name: 'gcr.io/cloud-builders/kubectl'
+  id: step2
+  waitFor:
+  - step1
   args: ['delete', '-f', 'resources/'  ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
@@ -13,6 +17,9 @@ steps:
 
 # Create release in Google Cloud Deploy
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  id: step3
+  waitFor:
+  - step2
   entrypoint: gcloud
   args: 
     [
