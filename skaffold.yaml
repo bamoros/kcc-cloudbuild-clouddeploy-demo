@@ -1,6 +1,6 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 deploy:
-  kustomize:
-    paths:
+  kubectl:
+    manifests:
       - team-data-engineers/dev
