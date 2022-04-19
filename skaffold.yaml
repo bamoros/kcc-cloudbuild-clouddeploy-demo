@@ -1,13 +1,13 @@
 apiVersion: skaffold/v2beta16
 kind: Config
-deploy:
-  kubectl:
-    manifests:
-      - team-data-engineers/staging/*
-
 profiles:
-- name: prod
-  deploy:
-    kubectl:
-      manifests:
-      - team-data-engineers/prod/*
+ - name: prod
+   deploy:
+     kubectl:
+       manifests:
+         - team-data-engineers/prod/*
+ - name: staging
+   deploy:
+     kubectl:
+       manifests:
+         - team-data-engineers/staging/*
