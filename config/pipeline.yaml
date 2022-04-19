@@ -1,29 +1,38 @@
 apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
- name: my-demo-app-1
+ name: bigcommerce-pipeline
 description: main application pipeline
 serialPipeline:
  stages:
- - targetId: qsdev
+ - targetId: dev
    profiles: []
- - targetId: qsprod
+ - targetId: staging
+   profiles: []
+ - targetId: prod
    profiles: []
 ---
 
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
- name: qsdev
+ name: dev
 description: development cluster
 gke:
  cluster: projects/amoros-sandbox-344216/locations/us-central1/clusters/krmapihost-config-controller-bc
 ---
-
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
- name: qsprod
+ name: staging
+description: staging cluster
+gke:
+ cluster: projects/amoros-sandbox-344216/locations/us-central1/clusters/krmapihost-config-controller-bc
+---
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+ name: prod
 description: production cluster
 gke:
  cluster: projects/amoros-sandbox-344216/locations/us-central1/clusters/krmapihost-config-controller-bc
