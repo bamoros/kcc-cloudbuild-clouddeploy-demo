@@ -21,7 +21,7 @@ metadata:
     label-one: "value-one"
   namespace: config-control
   # StorageBucket names must be globally unique. Replace ${PROJECT_ID?} with your project ID.
-  name: martes12-amoros-sandbox-344216
+  name: martes123-amoros-sandbox-344216
 spec:
   lifecycleRule:
     - action:
