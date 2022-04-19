@@ -1,17 +1,6 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 deploy:
-  kubectl:
-    manifests:
+  kustomize:
+    paths:
       - team-data-engineers/dev
-profiles:
-  - name: staging
-    deploy:
-      kustomize:
-        paths: 
-          - team-data-engineers/staging
-  - name: prod
-    deploy:
-      kustomize:
-        paths: 
-          - team-data-engineers/prod
