@@ -10,7 +10,7 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "create", "release-${COMMIT_SHA}" ,
+      "deploy", "releases", "create", "release-${COMMIT_SHA}1" ,
       "--delivery-pipeline", "bigcommerce-pipeline",
       "--region", "us-central1",
     ]
@@ -26,7 +26,7 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "promote", "release-${COMMIT_SHA}" ,
+      "deploy", "releases", "promote", "release-${COMMIT_SHA}1" ,
       "--delivery-pipeline", "bigcommerce-pipeline",
       "--region", "us-central1",
     ]
