@@ -4,3 +4,14 @@ deploy:
   kubectl:
     manifests:
       - team-data-engineers/resources/*
+profiles:
+  - name: staging
+    deploy:
+      kustomize:
+        paths: 
+          - team-data-engineers/resources/staging
+  - name: prod
+    deploy:
+      kustomize:
+        paths: 
+          - team-data-engineers/resources/prod

@@ -10,7 +10,7 @@ steps:
   - -xe
   - -c
   - |
-    sed -i s/PROJECT_ID/$PROJECT_ID/g ${_TEAM}/resources/*
+    sed -i s/PROJECT_ID/$PROJECT_ID/g ${_TEAM}/resources/dev/*
 
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
@@ -27,7 +27,7 @@ steps:
   - |
     gcloud config set deploy/region ${_REGION}
     gcloud container clusters get-credentials ${_CLOUDSDK_CONTAINER_CLUSTER} --region ${_REGION}
-    kubectl delete -f team-data-engineers/resources/
+    kubectl delete -f team-data-engineers/resources/dev
 
 # Create release in Google Cloud Deploy
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
