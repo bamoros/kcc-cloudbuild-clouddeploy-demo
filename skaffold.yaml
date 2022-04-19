@@ -1,17 +1,17 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 metadata:
-  name: full-stack
+ name: getting-started-kustomize
 profiles:
  - name: prod
    deploy:
-    kubectl:
-      manifests:
-      - team-data-engineers/prod/buckets.yaml
-      - team-data-engineers/prod/pubsub.yaml
+     kubectl:
+       manifests:
+        - team-data-engineers/prod/buckets.yaml
+        - team-data-engineers/prod/pubsub.yaml
  - name: staging
    deploy:
      kubectl:
        manifests:
         - team-data-engineers/staging/buckets-staging.yaml
-        - team-data-engineers/staging/pubsub-staging.yaml
+        - team-data-engineers/staging/pubsub-staging.yaml    
