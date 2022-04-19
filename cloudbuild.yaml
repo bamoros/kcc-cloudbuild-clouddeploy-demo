@@ -36,7 +36,6 @@ steps:
       "--delivery-pipeline", "cicd-pipeline",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--build-artifacts", "/workspace/artifacts.json"
     ]
 
 # steps:
