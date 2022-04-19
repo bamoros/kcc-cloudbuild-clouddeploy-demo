@@ -3,4 +3,4 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      - team-data-engineers/dev
+      - team-data-engineers/dev/*
