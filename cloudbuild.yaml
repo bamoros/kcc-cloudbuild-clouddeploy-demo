@@ -20,13 +20,6 @@ steps:
     gcloud config set deploy/region ${_REGION}
     gcloud container clusters get-credentials ${_CLOUDSDK_CONTAINER_CLUSTER} --region ${_REGION}
     kubectl delete -f team-data-engineers/dev
-
-- name: gcr.io/k8s-skaffold/skaffold
-  args:
-    - skaffold
-    - build
-    - '--interactive=false'
-    - '--file-output=/workspace/artifacts.json'
   
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
