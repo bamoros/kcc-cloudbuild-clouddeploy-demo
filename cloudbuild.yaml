@@ -10,23 +10,23 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "create", "release-${COMMIT_SHA}1" ,
+      "deploy", "releases", "create", "release-${COMMIT_SHA}" ,
       "--delivery-pipeline", "bigcommerce-pipeline",
       "--region", "us-central1",
     ]
 
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['delete', '-f', 'resources/'  ]
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=krmapihost-config-controller-bc'
+# - name: 'gcr.io/cloud-builders/kubectl'
+#   args: ['delete', '-f', 'resources/'  ]
+#   env:
+#   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
+#   - 'CLOUDSDK_CONTAINER_CLUSTER=krmapihost-config-controller-bc'
 
 # Promote to staging
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "promote", "release-${COMMIT_SHA}1" ,
+      "deploy", "releases", "promote", "release-${COMMIT_SHA}" ,
       "--delivery-pipeline", "bigcommerce-pipeline",
       "--region", "us-central1",
     ]
