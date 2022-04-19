@@ -5,15 +5,15 @@ metadata:
 deploy:
   kubectl:
     manifests: 
-      - team-data-engineers/dev/pubsub-dev.yaml
+      - team-data-engineers/dev
 profiles:
  - name: prod
    deploy:
      kubectl:
        manifests:
-         - team-data-engineers/prod/pubsub.yaml
+         - team-data-engineers/prod
  - name: staging
    deploy:
      kubectl:
        manifests:
-         - team-data-engineers/staging/pubsub-staging.yaml
+         - team-data-engineers/staging
