@@ -2,12 +2,6 @@ apiVersion: skaffold/v2beta16
 kind: Config
 metadata:
   name: full-stack
-deploy:
-  kubectl:
-    manifests:
-    - team-data-engineers/dev/buckets-dev.yaml
-    - team-data-engineers/dev/pubsub-dev.yaml
-      
 profiles:
  - name: prod
    deploy:
