@@ -21,7 +21,13 @@ steps:
     gcloud container clusters get-credentials ${_CLOUDSDK_CONTAINER_CLUSTER} --region ${_REGION}
     kubectl delete -f team-data-engineers/dev
 
-# Create release in Google Cloud Deploy
+- name: gcr.io/k8s-skaffold/skaffold
+  args:
+    - skaffold
+    - build
+    - '--interactive=false'
+    - '--file-output=/workspace/artifacts.json'
+  
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
   args:
@@ -30,11 +36,8 @@ steps:
       "--delivery-pipeline", "cicd-pipeline",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
+      "--build-artifacts", "/workspace/artifacts.json"
     ]
-options:
-  machineType: E2_HIGHCPU_8
-timeout: 3600s
-
 
 # steps:
 # - name: gcr.io/cloud-builders/gke-deploy
