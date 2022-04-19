@@ -10,7 +10,7 @@ steps:
   entrypoint: gcloud
   args: 
     [
-      "deploy", "releases", "create", "rel-${DATE}-${TIME}" ,
+      "deploy", "releases", "create", 'rel-${DATE}-${TIME}' ,
       "--delivery-pipeline", "bigcommerce-pipeline",
       "--region", "us-central1",
     ]
