@@ -21,7 +21,7 @@ metadata:
     label-one: "value-one"
   namespace: config-control
   # StorageBucket names must be globally unique. Replace ${PROJECT_ID?} with your project ID.
-  name: testing123-amoros-sandbox-344216
+  name: testing1234-amoros-sandbox-344216
 spec:
   lifecycleRule:
     - action:
@@ -29,7 +29,7 @@ spec:
       condition:
         age: 7
   versioning:
-    enabled: true
+    enabled: false
   cors:
     - origin: ["http://example.appspot.com"]
       responseHeader: ["Content-Type"]
