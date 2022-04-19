@@ -5,9 +5,9 @@ profiles:
    deploy:
      kubectl:
        manifests:
-         - team-data-engineers/prod/*
+         - team-data-engineers/prod/pubsub.yaml
  - name: staging
    deploy:
      kubectl:
        manifests:
-         - team-data-engineers/staging/*
+         - team-data-engineers/staging/pubsub-staging.yaml
