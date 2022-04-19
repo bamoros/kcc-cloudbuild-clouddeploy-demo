@@ -1,5 +1,11 @@
 apiVersion: skaffold/v2beta16
 kind: Config
+metadata:
+  name: full-stack
+deploy:
+  kustomize:
+    paths: 
+      - team-data-engineers/dev/pubsub-dev.yaml
 profiles:
  - name: prod
    deploy:
