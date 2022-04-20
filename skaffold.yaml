@@ -3,15 +3,15 @@ kind: Config
 metadata:
  name: getting-started-kustomize
 
-# deploy:
-#   kubectl:
-#     manifests:
-#       - 
+deploy:
+  kubectl:
+    manifests:
+      - team-data-engineers/dev
 profiles:
 - name: staging
   deploy:
-    kustomize:
-      paths:
+    kubectl:
+      manifests:
         - team-data-engineers/staging
 - name: prod
   deploy:
