@@ -13,7 +13,7 @@ steps:
   - -c
   - |
     gcloud config set deploy/region ${_REGION} 
-    sed -i s/PROJECT_ID/$PROJECT_ID/g ${_TEAM}/resources/staging/*
+    sed -i s/PROJECT_ID/$PROJECT_ID/g ${_TEAM}/resources/dev/*
 
 #Deploy Resources
 - name: "gcr.io/cloud-builders/gke-deploy"
