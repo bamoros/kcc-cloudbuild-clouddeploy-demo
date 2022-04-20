@@ -21,17 +21,22 @@ steps:
     sed -i s/CLUSTER_NAME/${_CLOUDSDK_CONTAINER_CLUSTER}/g ${_TEAM}/deploy/*
     gcloud deploy apply --file ${_TEAM}/deploy/pipeline.yaml
 
-#Create a new release for the changes
-- name: gcr.io/google.com/cloudsdktool/cloud-sdk
-  entrypoint: gcloud
-  args:
-    [
-      "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--delivery-pipeline", "cicd-pipeline",
-      "--source ${_TEAM}/skaffold.yaml",
-      "--region", "us-central1",
-      "--annotations", "commitId=${REVISION_ID}",
-    ]
+    gcloud alpha deploy releases create rel-${SHORT_SHA} \
+                        --delivery-pipeline ${_TEAM}-pipeline \
+                        --source ${_TEAM}/skaffold.yaml \
+                        --description "$(git log -1  --pretty='%s')" \
+
+# #Create a new release for the changes
+# - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+#   entrypoint: gcloud
+#   args:
+#     [
+#       "deploy", "releases", "create", "rel-${SHORT_SHA}",
+#       "--delivery-pipeline ${_TEAM}-pipeline",
+#       "--source ${_TEAM}/skaffold.yaml",
+#       "--region", "us-central1",
+#       "--annotations", "commitId=${REVISION_ID}",
+#     ]
 
 
 
