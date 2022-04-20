@@ -17,7 +17,7 @@ profiles:
   deploy:
     kubectl:
       manifests:
-        - team-data-engineers/prod.buckets-prod.yaml
+        - team-data-engineers/prod/buckets-prod.yaml
 
 
 
