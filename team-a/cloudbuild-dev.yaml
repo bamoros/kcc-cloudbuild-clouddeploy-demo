@@ -1,6 +1,6 @@
 substitutions:
   _REGION: us-central1
-  _TEAM: team-data-engineers
+  _TEAM: team-a
   _TARGET_PROJECT_ID: amoros-sandbox-344216
   _CLOUDSDK_CONTAINER_CLUSTER: krmapihost-config-controller-bc
 
