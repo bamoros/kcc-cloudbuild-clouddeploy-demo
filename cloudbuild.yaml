@@ -31,32 +31,6 @@ steps:
       "--annotations", "commitId=${REVISION_ID}",
     ]
 
-# steps:
-# - name: gcr.io/cloud-builders/gke-deploy
-#   args:
-#   - run
-#   - --filename=resources/
-#   - --location=us-central1
-#   - --cluster=krmapihost-config-controller-bc
-
-# - name: 'gcr.io/cloud-builders/kubectl'
-#   args: ['delete', '-f', 'resources/'  ]
-#   env:
-#   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
-#   - 'CLOUDSDK_CONTAINER_CLUSTER=krmapihost-config-controller-bc'
-
-
-
-# # Promote to staging
-# - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-#   entrypoint: gcloud
-#   args: 
-#     [
-#       "deploy", "releases", "promote", 'rel-${COMMIT_SHA}' ,
-#       "--delivery-pipeline", "cicd-pipeline",
-#       "--region", "us-central1",
-#     ] 
-
 
 
 
