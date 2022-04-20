@@ -5,7 +5,7 @@ metadata:
 deploy:
   kubectl:
     manifests:
-      - resources/dev/buckets-dev.yaml
+      - resources/dev/*.yaml
 profiles:
 - name: staging
   deploy:
