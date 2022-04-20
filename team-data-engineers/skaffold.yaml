@@ -5,17 +5,17 @@ metadata:
 deploy:
   kubectl:
     manifests:
-      - team-data-engineers/resources/dev/buckets-dev.yaml
+      - resources/dev/buckets-dev.yaml
 profiles:
 - name: staging
   deploy:
     kubectl:
       manifests:
-        - team-data-engineers/resources/staging/buckets-staging.yaml
+        - resources/staging/buckets-staging.yaml
 - name: prod
   deploy:
     kubectl:
       manifests:
-        - team-data-engineers/resources/prod/buckets-prod.yaml
+        - resources/prod/buckets-prod.yaml
 
 
