@@ -11,11 +11,11 @@ profiles:
   deploy:
     kubectl:
       manifests:
-        - resources/staging/buckets-staging.yaml
+        - resources/staging/*.yaml
 - name: prod
   deploy:
     kubectl:
       manifests:
-        - resources/prod/buckets-prod.yaml
+        - resources/prod/*.yaml
 
 
