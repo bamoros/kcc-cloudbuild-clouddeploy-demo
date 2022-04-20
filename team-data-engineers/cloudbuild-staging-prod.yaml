@@ -29,7 +29,7 @@ steps:
     [
       "deploy", "releases", "create", "rel-${SHORT_SHA}",
       "--delivery-pipeline=${_TEAM}-pipeline",
-      "--skaffold-file=team-data-engineers/skaffold.yaml",
+      "--skaffold-file=${_TEAM}/skaffold.yaml",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
     ]
