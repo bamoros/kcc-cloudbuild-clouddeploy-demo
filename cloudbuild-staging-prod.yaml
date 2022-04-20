@@ -28,7 +28,7 @@ steps:
   args:
     [
       "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--delivery-pipeline ${_TEAM}-pipeline",
+      "--delivery-pipeline=${_TEAM}-pipeline",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
     ]
