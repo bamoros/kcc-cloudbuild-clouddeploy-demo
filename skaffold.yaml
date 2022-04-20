@@ -12,12 +12,12 @@ profiles:
   deploy:
     kustomize:
       paths:
-        - team-data-engineers/staging/*
+        - team-data-engineers/staging
 - name: prod
   deploy:
     kubectl:
       manifests:
-        - team-data-engineers/prod/*
+        - team-data-engineers/prod
 
 
 
