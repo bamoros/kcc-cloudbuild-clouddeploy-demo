@@ -20,6 +20,7 @@ steps:
     sed -i s/REGION/${_REGION}/g ${_TEAM}/deploy/*
     sed -i s/CLUSTER_NAME/${_CLOUDSDK_CONTAINER_CLUSTER}/g ${_TEAM}/deploy/*
     gcloud deploy apply --file ${_TEAM}/deploy/pipeline.yaml
+    cd team-data-engineers
 
 
 #Create a new release for the changess
