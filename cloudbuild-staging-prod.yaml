@@ -22,7 +22,7 @@ steps:
     gcloud deploy apply --file ${_TEAM}/deploy/pipeline.yaml
 
 
-#Create a new release for the changes
+#Create a new release for the changess
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
   args:
