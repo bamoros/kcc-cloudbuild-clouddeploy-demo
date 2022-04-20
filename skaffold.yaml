@@ -1,16 +1,22 @@
 apiVersion: skaffold/v2beta16
 kind: Config
 metadata:
- name: pipeline-kustomize
+ name: getting-started-kustomize
+
 profiles:
 - name: staging
   deploy:
     kustomize:
       paths:
-      - team-data-engineers/staging
+        - team-data-engineers/staging/buckets-staging.yaml
+        - team-data-engineers/staging/pubsub-staging.yaml
 - name: prod
   deploy:
-    kustomize:
-      paths:
-      - team-data-engineers/prod
+    kubectl:
+      manifests:
+        - team-data-engineers/prod/buckets-prod.yaml
+        - team-data-engineers/prod/pubsub-prod.yaml
+
+
+
 
