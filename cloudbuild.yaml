@@ -22,7 +22,7 @@ steps:
   - |
     gcloud config set deploy/region ${_REGION}
     gcloud container clusters get-credentials ${_CLOUDSDK_CONTAINER_CLUSTER} --region ${_REGION}
-    kubectl delete -f team-data-engineers/dev
+    kubectl delete -f team-data-engineers/resources/dev
   
 #Create a new release for the changes
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
