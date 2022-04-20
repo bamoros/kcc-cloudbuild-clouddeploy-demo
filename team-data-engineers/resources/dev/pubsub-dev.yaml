@@ -20,6 +20,6 @@ metadata:
   namespace: config-control
   annotations:
       cnrm.cloud.google.com/project-id: amoros-sandbox-344216
-  name: pubsubtopic-dev
+  name: pubsubtopic-dev-a
 spec:
   resourceID: pubsubtopic-sample
