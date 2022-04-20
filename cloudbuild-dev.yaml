@@ -6,14 +6,14 @@ substitutions:
 
 #Var substitutions
 steps:
-- name: 'google/cloud-sdk:latest'
-  entrypoint: 'sh'
-  args:
-  - -xe
-  - -c
-  - |
-    gcloud config set deploy/region ${_REGION} 
-    sed -i s/PROJECT_ID/$PROJECT_ID/g ${_TEAM}/resources/dev/*
+# - name: 'google/cloud-sdk:latest'
+#   entrypoint: 'sh'
+#   args:
+#   - -xe
+#   - -c
+#   - |
+#     gcloud config set deploy/region ${_REGION} 
+#     sed -i s/PROJECT_ID/$PROJECT_ID/g ${_TEAM}/resources/dev/*
 
 #Deploy Resources
 - name: "gcr.io/cloud-builders/gke-deploy"
